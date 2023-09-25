@@ -1,0 +1,34 @@
+public static int[] flattenAndSort(int[][] array) {
+           // Check for an empty array
+        if (array.length == 0) {
+            return new int[]{};
+        }
+
+        // Calculate the total length of the resulting array
+        int totalLength = 0;
+        for (int[] subArray : array) {
+            totalLength += subArray.length;
+        }
+
+        // Create a new array to hold the flattened elements
+        int[] flattenedArray = new int[totalLength];
+
+        // Index to keep track of the position in the new array
+        int index = 0;
+
+        // Flatten the array and copy elements to the new array
+        for (int[] subArray : array) {
+            for (int num : subArray) {
+                flattenedArray[index] = num;
+                index++;
+            }
+        }
+
+        // Sort the flattened array
+        Arrays.sort(flattenedArray);
+
+        return flattenedArray;
+    }
+}
+
+
