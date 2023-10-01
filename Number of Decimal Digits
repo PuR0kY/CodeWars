@@ -1,4 +1,3 @@
-Number of Decimal Digits
 
  public static int Digits(long n) {
         String result = String.valueOf(n);
@@ -6,3 +5,4 @@ Number of Decimal Digits
 
     }
 }
+
